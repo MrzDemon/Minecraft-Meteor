@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "fall-damage-mod",
+	"version": "${version}",
+	"name": "Fall Damage Mod",
+	"description": "Increases safe falling distance from 3 to 6 blocks. Adds a button that negates all fall damage when pressed within 100ms of hitting the ground.",
+	"authors": [
+		"Jefff Mocha"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/fall-damage-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.jefffmocha.falldamagemod.FallDamageMod"
+		],
+		"client": [
+			"net.jefffmocha.falldamagemod.FallDamageModClient"
+		],
+		"fabric-datagen": [
+			"net.jefffmocha.falldamagemod.FallDamageModDataGenerator"
+		]
+	},
+	"mixins": [
+		"fall-damage-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
